@@ -47,13 +47,14 @@ contract NFTStake is
         nativeTokenWrapper = _nativeTokenWrapper;
     }
 
+     
     /// @dev Initiliazes the contract, like a constructor.
     function initialize(
         address _defaultAdmin,
         string memory _contractURI,
         address[] memory _trustedForwarders,
         address _rewardToken,
-        address _stakingToken,
+        address _stakingToken,  // TODO - _stakingToken is only one but we want many
         uint256 _timeUnit,
         uint256 _rewardsPerUnitTime
     ) external initializer {
